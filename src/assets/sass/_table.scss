@@ -1,0 +1,95 @@
+table {
+  width: 100%;
+
+  thead > tr > th {
+    font-weight: normal;
+    color: $color-grey;
+    text-align: left;
+  }
+
+  tbody > tr {
+    font-size: 14px;
+
+    td {
+      padding: 0.5rem 0;
+
+      svg {
+        color: $color-grey;
+      }
+
+      .badge-approved,
+      .badge-pending {
+        float: right;
+        padding: 0.1rem 1rem;
+        border-radius: 5px;
+      }
+
+      .badge-approved {
+        background-color: $color-light-blue;
+        color: $color-dark-blue;
+      }
+
+      .badge-pending {
+        background-color: $color-yellow-light;
+        color: $color-yellow-dark;
+      }
+
+      .user-img {
+        height: 40px;
+        width: 40px;
+      }
+      .circle-dot {
+        background-color: $color-dark-blue;
+        height: 10px;
+        width: 10px;
+        border-radius: 50%;
+      }
+
+      > .initial {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        background-color: $color-light-blue;
+        color: $color-dark-blue;
+        width: 40px;
+        height: 40px;
+        font-weight: bold;
+      }
+    }
+
+    &:nth-child(n) {
+      td {
+        .circle-dot {
+          background-color: $color-dark-blue;
+        }
+
+        > .initial {
+          background-color: $color-light-blue;
+          color: $color-dark-blue;
+        }
+      }
+    }
+
+    &:nth-child(2n) {
+      td {
+        .circle-dot {
+          background-color: $color-yellow-dark;
+        }
+
+        > .initial {
+          background-color: $color-yellow-light;
+          color: $color-yellow-dark;
+        }
+      }
+    }
+
+    &:nth-child(3n) {
+      td {
+        .circle-dot {
+          background-color: $color-green;
+        }
+      }
+    }
+  }
+}
